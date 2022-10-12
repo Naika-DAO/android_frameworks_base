@@ -111,9 +111,9 @@ class CustomThemeOverlayController @Inject constructor(
 
     override fun onTuningChanged(key: String?, newValue: String?) {
         key?.let {
-                customColor = Settings.Secure.getInt(mContext.contentResolver, PREF_CUSTOM_COLOR, 0) == 1
+                customColor = Settings.Secure.getInt(mContext.contentResolver, PREF_CUSTOM_COLOR, 1) == 1
                 colorOverride = Settings.Secure.getInt(mContext.contentResolver,
-                        PREF_COLOR_OVERRIDE, -1)
+                        PREF_COLOR_OVERRIDE, -12687041)
                 chromaFactor = (Settings.Secure.getFloat(mContext.contentResolver,
                         PREF_CHROMA_FACTOR, 100.0f) / 100f).toDouble()
                 accurateShades = Settings.Secure.getInt(mContext.contentResolver, PREF_ACCURATE_SHADES, 1) != 0
